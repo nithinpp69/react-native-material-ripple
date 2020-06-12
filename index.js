@@ -187,6 +187,7 @@ export default class Ripple extends PureComponent {
         scale: progress.interpolate({
           inputRange: [0, 1],
           outputRange: [0.5 / radius, R / radius],
+          useNativeDriver: true,
         }),
       }],
 
@@ -194,6 +195,7 @@ export default class Ripple extends PureComponent {
         progress.interpolate({
           inputRange: [0, 1],
           outputRange: [rippleOpacity, 0],
+          useNativeDriver: true,
         }):
         rippleOpacity,
     };
